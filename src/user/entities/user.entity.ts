@@ -35,7 +35,7 @@ export class User {
         @Column('boolean',{name:"active",nullable:true})
         isActive:boolean
         // relation
-        @OneToMany(() => Contact, (productContact: Contact) => productContact.userId,{cascade:true})
+        @OneToMany(() => Contact, (productContact: Contact) => productContact.id,{cascade:true})
         productContact: Contact[];
         @OneToMany(() => Adress, (productAdress: Adress) => productAdress.userId,{cascade:true})
         productAdress: Adress[];
