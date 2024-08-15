@@ -27,7 +27,7 @@ import { CommandDetailModule } from './command-detail/command-detail.module';
 import { PicturesModule } from './pictures/pictures.module';
 import { DeviceModule } from './sale/device/device.module';
 import { DeviceDetailModule } from './sale/device-detail/device-detail.module';
-
+import { Transporteur } from './transporteur/entities/transporteur.entity';
 
 @Module({
   imports: [
@@ -42,16 +42,37 @@ import { DeviceDetailModule } from './sale/device-detail/device-detail.module';
         database: 'IocCurio',
         autoLoadEntities: true,
         synchronize: true,
-          //  synchronize: false
-
-          
+        //  synchronize: false
       }),
     }),
-    ConfigModule.forRoot(),TvaModule,SwaggerModule, AccessoireModule, UserModule, PriceModule, MarksModule, DetailsModule,  ProductsModule, UnitsMeasuresModule, AdressModule, ContactModule, CategoryModule, PayementMethodModule, TransactionModule, AuthModule, CostModule, CustomerModule, CommandeModule, SaleModule, CommandDetailModule,PicturesModule,DeviceModule,DeviceDetailModule,
+    ConfigModule.forRoot(),
+    TvaModule,
+    SwaggerModule,
+    AccessoireModule,
+    UserModule,
+    PriceModule,
+    MarksModule,
+    DetailsModule,
+    ProductsModule,
+    UnitsMeasuresModule,
+    AdressModule,
+    ContactModule,
+    CategoryModule,
+    PayementMethodModule,
+    TransactionModule,
+    AuthModule,
+    CostModule,
+    CustomerModule,
+    CommandeModule,
+    SaleModule,
+    CommandDetailModule,
+    PicturesModule,
+    DeviceModule,
+    DeviceDetailModule,
+    Transporteur,
   ],
 
   controllers: [AppController],
   providers: [AppService],
 })
 export class AppModule {}
- 
