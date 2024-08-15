@@ -27,6 +27,7 @@ import { CommandDetailModule } from './command-detail/command-detail.module';
 import { PicturesModule } from './pictures/pictures.module';
 import { DeviceModule } from './sale/device/device.module';
 import { DeviceDetailModule } from './sale/device-detail/device-detail.module';
+import { TransporteurModule } from './transporteur/transporteur.module';
 
 
 @Module({
@@ -47,7 +48,10 @@ import { DeviceDetailModule } from './sale/device-detail/device-detail.module';
           
       }),
     }),
-    ConfigModule.forRoot(),TvaModule,SwaggerModule, AccessoireModule, UserModule, PriceModule, MarksModule, DetailsModule,  ProductsModule, UnitsMeasuresModule, AdressModule, ContactModule, CategoryModule, PayementMethodModule, TransactionModule, AuthModule, CostModule, CustomerModule, CommandeModule, SaleModule, CommandDetailModule,PicturesModule,DeviceModule,DeviceDetailModule,
+    ConfigModule.forRoot(),TvaModule,SwaggerModule, AccessoireModule, UserModule, PriceModule, MarksModule,
+     DetailsModule,  ProductsModule, UnitsMeasuresModule, AdressModule, ContactModule, CategoryModule, 
+     PayementMethodModule, TransactionModule, AuthModule, CostModule, CustomerModule, CommandeModule, 
+     SaleModule, CommandDetailModule,PicturesModule,DeviceModule,DeviceDetailModule, TransporteurModule,
   ],
 
   controllers: [AppController],
