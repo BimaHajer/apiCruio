@@ -2,35 +2,32 @@ import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/commo
 import { ContactService } from './contact.service';
 import { CreateContactDto } from './dto/create-contact.dto';
 import { UpdateContactDto } from './dto/update-contact.dto';
-import { ApiTags } from '@nestjs/swagger';
 
 @Controller('contact')
-@ApiTags()
 export class ContactController {
   constructor(private readonly contactService: ContactService) {}
 
-  @Post('create')
+  @Post("add-contact")
   create(@Body() createContactDto: CreateContactDto) {
     return this.contactService.create(createContactDto);
-  } 
+  }
 
-  @Get('contact-list')
+  @Get("list-contact")
   findAll() {
     return this.contactService.findAll();
   }
 
-  @Get(':id')
+  @Get('contact/:id')
   findOne(@Param('id') id: string) {
-    return this.contactService.findOneById(+id);
+    return this.contactService.findOne(+id);
   }
 
-  @Patch(':id')
-  async updateContact(@Param('id') id: number, @Body() UpdateContactDto: UpdateContactDto) {
-   // Remplacez cela par la méthode pour obtenir l'ID de l'utilisateur authentifié
-   let userId=1
-    return this.contactService.update(id,userId, UpdateContactDto,);
-  }  
-  @Delete(':id')
+  @Patch('update-contact/:id')
+  update(@Param('id') id: string, @Body() updateContactDto: UpdateContactDto) {
+    return this.contactService.update(+id, updateContactDto);
+  }
+
+  @Delete('delete-contact/:id')
   remove(@Param('id') id: string) {
     return this.contactService.remove(+id);
   }
