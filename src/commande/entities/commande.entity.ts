@@ -3,7 +3,7 @@ import { CommandDetail } from "src/command-detail/entities/command-detail.entity
 import { Customer } from "src/customer/entities/customer.entity";
 
 import { Device } from "src/sale/device/entities/device.entity";
-import { Invoice } from "src/sale/invoice/entities/invoice.entity";
+import { Invoice } from "src/invoice/entities/invoice.entity";
 import { Transaction } from "src/transaction/entities/transaction.entity";
 
 import { BeforeInsert, BeforeUpdate, Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";

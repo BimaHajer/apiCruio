@@ -27,27 +27,28 @@ import { CommandDetailModule } from './command-detail/command-detail.module';
 import { PicturesModule } from './pictures/pictures.module';
 import { DeviceModule } from './sale/device/device.module';
 import { DeviceDetailModule } from './sale/device-detail/device-detail.module';
+import { InvoiceModule } from './invoice/invoice.module';
 
 
 @Module({
   imports: [
-    // UserModule,
+    
     TypeOrmModule.forRootAsync({
       useFactory: () => ({
         type: 'postgres',
         host: 'localhost',
         port: 5432,
         username: 'postgres',
-        password: 'postgres',
-        database: 'IocCurio',
+        password: '26627',
+        database: 'testcrud',
         autoLoadEntities: true,
         synchronize: true,
-          //  synchronize: false
+         
 
           
       }),
     }),
-    ConfigModule.forRoot(),TvaModule,SwaggerModule, AccessoireModule, UserModule, PriceModule, MarksModule, DetailsModule,  ProductsModule, UnitsMeasuresModule, AdressModule, ContactModule, CategoryModule, PayementMethodModule, TransactionModule, AuthModule, CostModule, CustomerModule, CommandeModule, SaleModule, CommandDetailModule,PicturesModule,DeviceModule,DeviceDetailModule,
+    ConfigModule.forRoot(),TvaModule,SwaggerModule, AccessoireModule, UserModule, PriceModule, MarksModule, DetailsModule,  ProductsModule, UnitsMeasuresModule, AdressModule, ContactModule, CategoryModule, PayementMethodModule, TransactionModule, AuthModule, CostModule, CustomerModule, CommandeModule, SaleModule, CommandDetailModule,PicturesModule,DeviceModule,DeviceDetailModule, InvoiceModule,
   ],
 
   controllers: [AppController],

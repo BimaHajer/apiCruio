@@ -1,7 +1,6 @@
 import { ApiProperty } from "@nestjs/swagger";
 import { Customer } from "src/customer/entities/customer.entity";
 import { BeforeInsert, BeforeUpdate, Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
-
 import { Commande } from "src/commande/entities/commande.entity";
 import { Transaction } from "src/transaction/entities/transaction.entity";
 

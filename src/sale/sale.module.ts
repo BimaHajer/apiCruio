@@ -5,7 +5,7 @@ import { OrderModule } from './order/order.module';
 import { DeviceModule } from './device/device.module';
 
 import { DeviceDetailModule } from './device-detail/device-detail.module';
-import { InvoiceModule } from './invoice/invoice.module';
+import { InvoiceModule } from 'src/invoice/invoice.module';
 
 @Module({
   controllers: [SaleController],

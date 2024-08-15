@@ -1,6 +1,6 @@
 import { Commande } from "src/commande/entities/commande.entity";
 import { Device } from "src/sale/device/entities/device.entity";
-import { Invoice } from "src/sale/invoice/entities/invoice.entity";
+import { Invoice } from "src/invoice/entities/invoice.entity";
 import { BeforeInsert, BeforeUpdate, Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity('transaction')

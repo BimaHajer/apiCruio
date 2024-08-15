@@ -13,9 +13,11 @@ export class InvoiceController {
   }
 
   @Get("invoice-list")
-  findAll() {
-    return this.invoiceService.findAll();
+  async findAll() {
+    const [invoices, count] = await this.invoiceService.findAll();
+    return invoices;
   }
+  
 
   @Get(':id')
   findOne(@Param('id') id: string) {
@@ -24,13 +26,12 @@ export class InvoiceController {
 
   @Patch(':id')
   async updateInvoice(@Param('id') id: number, @Body() updateInvoiceDto: UpdateInvoiceDto) {
-   // Remplacez cela par la méthode pour obtenir l'ID de l'utilisateur authentifié
    let userId=1
     return this.invoiceService.update(id,userId, updateInvoiceDto,);
   } 
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
+  remove(@Param('id') id: number) {
     return this.invoiceService.remove(id);
   }
   @Post('delete-multiple')
