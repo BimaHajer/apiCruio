@@ -1,6 +1,6 @@
-import { Fournisseur } from "src/fournisseur/entities/fournisseur.entity";
 import { BeforeInsert, BeforeUpdate, Column, Entity, JoinColumn, ManyToOne, OneToMany, OneToOne, PrimaryGeneratedColumn } from "typeorm";
 import { BuyingDetail } from "../buying-detail/entities/buying-detail.entity";
+import { Fournisseur } from "src/fournisseur/entities/fournisseur.entity";
 
 @Entity("buying")
 export class Buying {

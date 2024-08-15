@@ -1,17 +1,4 @@
-import { PartialType } from '@nestjs/swagger';
+import { PartialType } from '@nestjs/mapped-types';
 import { CreateContactDto } from './create-contact.dto';
 
-export class UpdateContactDto extends PartialType(CreateContactDto) {
-    id?: number;
-  
-    title?: string;
-  
-    description?: string;
-  
-    tel?: number;
-  
-    email?: string;
-
-    fax?:number;
-    type?:string;
-}
+export class UpdateContactDto extends PartialType(CreateContactDto) {}
