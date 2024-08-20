@@ -52,7 +52,7 @@ export class Contact {
     
     @ManyToOne(() => Fournisseur, (provider: Fournisseur) => provider.id)
     @JoinColumn({ name: "providerid" })
-    providerId: number | null;
+    providerid: number | null;
 
   
 

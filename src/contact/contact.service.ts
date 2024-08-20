@@ -18,7 +18,7 @@ export class ContactService {
   }
 
   findAll() {
-   return this.ProviderRepository.findAndCount({relations:["providerId"]})
+   return this.ProviderRepository.findAndCount({relations:["providerid"]})
 }  
 
   findOne(id: number) {

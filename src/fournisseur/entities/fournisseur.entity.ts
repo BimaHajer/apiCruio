@@ -29,7 +29,7 @@ export class Fournisseur {
     updatedAt: Date;
    
     ///relations
-    @OneToMany(() => Contact, (contact: Contact) => contact.providerId, { cascade: true })
+    @OneToMany(() => Contact, (contact: Contact) => contact.providerid, { cascade: true })
     contacts: Contact[];
 
     @OneToMany(()=>Buying,(buying:Buying)=>buying.id)
