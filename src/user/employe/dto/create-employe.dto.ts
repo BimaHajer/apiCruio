@@ -1,9 +1,12 @@
 export class CreateEmployeDto {
     employee_id?: number;
-    first_name: string;
-    last_name: string;
+    firstName: string;
+    lastName: string;
     email: string;
-    phone_number?: string;
+    telephone?: string;
+    password?: string;
+    role?: string;
+    confirmPassword?: string;id: any;
     date_of_birth: Date;
     gender: string;
     address?: string;
@@ -19,4 +22,5 @@ export class CreateEmployeDto {
     emergency_contact_phone?: string;
     created_at?: Date;
     updated_at?: Date;
+
 }

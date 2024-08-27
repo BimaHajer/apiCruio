@@ -4,19 +4,25 @@ import { Entity, Column, PrimaryGeneratedColumn, BeforeInsert, BeforeUpdate } fr
 export class Employe {
   
   @PrimaryGeneratedColumn()
-  id: number;  // Auto-increment, Primary Key
+  id: number;  
 
-  @Column('text', { name: "first_name", nullable: true })
-  first_name: string;
+  @Column('text', { name: "firstName", nullable: true })
+  firstName: string;
 
-  @Column('text', { name: "last_name", nullable: true })
-  last_name: string;
+  @Column('text', { name: "lastName", nullable: true })
+  lastName: string;
 
   @Column('text', { name: "email", nullable: true, unique: true })
   email: string;
 
-  @Column('text', { name: "phone_number", nullable: true })
-  phone_number: string;
+  @Column('text', { name: "telephone", nullable: true })
+  telephone: string;
+  @Column('text', { name: "role", nullable: true })
+  role: string;
+  @Column('text', { name: "password", nullable: true })
+  password: string;
+  @Column('text', { name: "confirmPassword", nullable: true })
+  confirmPassword: string;
 
   @Column('date', { name: "date_of_birth", nullable: true })
   date_of_birth: Date;

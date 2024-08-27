@@ -7,22 +7,23 @@ import { UpdateEmployeDto } from './dto/update-employe.dto';
 export class EmployeController {
   constructor(private readonly employeService: EmployeService) {}
 
-  @Post('create-empoye')
+  @Post('create-employer')
   create(@Body() createEmployeDto: CreateEmployeDto) {
+    console.log('employer',createEmployeDto)
     return this.employeService.create(createEmployeDto);
   }
 
-  @Get('list-employe')
+  @Get('list-employer')
   findAll() {
     return this.employeService.findAll();
   }
 
-  @Get('employe/:id')
+  @Get('employer/:id')
   findOne(@Param('id') id: number) {
     return this.employeService.findOne(+id);
   }
 
-  @Patch('update-employe/:id')
+  @Patch('update-employer/:id')
   update(@Param('id') id: number, @Body() updateEmployeDto: UpdateEmployeDto) {
     return this.employeService.update(+id, updateEmployeDto);
   }
