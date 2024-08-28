@@ -19,10 +19,10 @@ export class BuyingDetailService {
   }
 
   findAll() {
-    return this.detailRepository.findAndCount({relations:["BuyingId"]})  }
+    return this.detailRepository.findAndCount({relations:["BuyingId","productId"]})  }
 
   findOne(id: number) {
-    return this.detailRepository.findOne({where:{id:id}})
+    return this.detailRepository.findOne({where:{id:id},relations:["BuyingId","productId"]})
   }
 
   async update(id: number, updateBuyingDetailDto: UpdateBuyingDetailDto): Promise<BuyingDetail> {

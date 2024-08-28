@@ -15,15 +15,17 @@ export class BuyingService {
 
   create(createBuyingDto: CreateBuyingDto) {
     let buying=this.buyingRepository.create(createBuyingDto)
+     console.log("In service:",createBuyingDto)
     return this.buyingRepository.save(buying)
   }
 
   findAll() {
-    return this.buyingRepository.findAndCount()
+
+    return this.buyingRepository.findAndCount({relations:["idProvider","buyingDetails","buyingDetails.productId"]})
   }
 
   findOne(id: number) {
-    return this.buyingRepository.findOne({where:{id:id}})
+    return this.buyingRepository.findOne({where:{id:id},relations:["idProvider","buyingDetails","buyingDetails.productId"]})
   }
 
   async update(id: number, updateBuyingDto: UpdateBuyingDto): Promise<Buying> {
@@ -40,7 +42,33 @@ export class BuyingService {
     }
   }
 
-  remove(id: number) {
+
+  remove(id:number)
+  {
     return this.buyingRepository.delete(id)
   }
+
+
+  async removeMultiple(toDelete: any) {   
+     
+    let resultDelete: boolean = null
+    let resultDisable: boolean = null
+    const allIntegers = toDelete.every(item => Number.isInteger(item));
+    if (!allIntegers) {
+      console.log('Invalid data in toDelete array');
+      // Handle the error appropriately
+      return;
+    }
+
+    if (toDelete.length != 0) {
+      if (await this.buyingRepository.delete(toDelete)) {
+        resultDelete = true
+      } else
+        resultDelete = false
+        console.log("buyingRepository",this.buyingRepository)
+    }
+    console.log("Deleted(In Service):",this.buyingRepository)
+  return true 
+  }
 }
+

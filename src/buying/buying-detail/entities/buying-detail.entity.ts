@@ -62,14 +62,11 @@ export class BuyingDetail {
     @ManyToOne(()=> Buying,(buying:Buying)=>buying.id)
     @JoinColumn({ name: "buyingId" })
     buyingId:number
-  
-  
-  
     @BeforeInsert()
     eventCreatedAt() {
       this.createdAt = new Date();
     }
-  
+
     @BeforeUpdate()
     eventUpdatedAt() {
       this.updatedAt = new Date();

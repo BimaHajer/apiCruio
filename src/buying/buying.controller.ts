@@ -9,6 +9,7 @@ export class BuyingController {
 
   @Post("create-buying")
   create(@Body() createBuyingDto: CreateBuyingDto) {
+    console.log("In Controller:",createBuyingDto);
     return this.buyingService.create(createBuyingDto);
   }
 
@@ -31,4 +32,10 @@ export class BuyingController {
   remove(@Param('id') id: number) {
     return this.buyingService.remove(id);
   }
+
+  @Post('delete-multiple')
+  removeMultiple(@Body('') toDelete:any) {
+    console.log("In Controller:",toDelete)
+    return this.buyingService.removeMultiple(toDelete)}
+
 }
