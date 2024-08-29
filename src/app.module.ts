@@ -15,6 +15,7 @@ import { UnitsMeasuresModule } from './units-measures/units-measures.module';
 import { AdressModule } from './adress/adress.module';
 import { ContactModule } from './contact/contact.module';
 import { CategoryModule } from './category/category.module';
+import { TransporteurModule } from './transporteur/transporteur.module';
 
 import { PayementMethodModule } from './payement-method/payement-method.module';
 import { TransactionModule } from './transaction/transaction.module';
@@ -48,7 +49,7 @@ import { DepartementModule } from './departement/departement.module';
           
       }),
     }),
-    ConfigModule.forRoot(),TvaModule,SwaggerModule, AccessoireModule, UserModule, PriceModule, MarksModule, DetailsModule,  ProductsModule, UnitsMeasuresModule, AdressModule, ContactModule, CategoryModule, PayementMethodModule, TransactionModule, AuthModule, CostModule, CustomerModule, CommandeModule, SaleModule, CommandDetailModule,PicturesModule,DeviceModule,DeviceDetailModule, DepartementModule,
+    ConfigModule.forRoot(),TvaModule,SwaggerModule,DepartementModule , AccessoireModule,TransporteurModule, UserModule, PriceModule, MarksModule, DetailsModule,  ProductsModule, UnitsMeasuresModule, AdressModule, ContactModule, CategoryModule, PayementMethodModule, TransactionModule, AuthModule, CostModule, CustomerModule, CommandeModule, SaleModule, CommandDetailModule,PicturesModule,DeviceModule,DeviceDetailModule,
   ],
 
   controllers: [AppController],
