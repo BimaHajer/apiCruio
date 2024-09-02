@@ -28,6 +28,7 @@ import { PicturesModule } from './pictures/pictures.module';
 import { DeviceModule } from './sale/device/device.module';
 import { DeviceDetailModule } from './sale/device-detail/device-detail.module';
 import { DepartementModule } from './departement/departement.module';
+import { PosteModule } from './poste/poste.module';
 
 
 @Module({
@@ -48,7 +49,7 @@ import { DepartementModule } from './departement/departement.module';
           
       }),
     }),
-    ConfigModule.forRoot(),TvaModule,SwaggerModule, AccessoireModule, UserModule, PriceModule, MarksModule, DetailsModule,  ProductsModule, UnitsMeasuresModule, AdressModule, ContactModule, CategoryModule, PayementMethodModule, TransactionModule, AuthModule, CostModule, CustomerModule, CommandeModule, SaleModule, CommandDetailModule,PicturesModule,DeviceModule,DeviceDetailModule, DepartementModule,
+    ConfigModule.forRoot(),TvaModule,SwaggerModule, AccessoireModule, UserModule, PriceModule, MarksModule, DetailsModule,  ProductsModule, UnitsMeasuresModule, AdressModule, ContactModule, CategoryModule, PayementMethodModule, TransactionModule, AuthModule, CostModule, CustomerModule, CommandeModule, SaleModule, CommandDetailModule,PicturesModule,DeviceModule,DeviceDetailModule, DepartementModule, PosteModule,
   ],
 
   controllers: [AppController],
